@@ -41,7 +41,7 @@ def analyze_sessions(sessions):
             fee = session['fee_type']
             pincode = session['pincode']
             vaccine = session['vaccine']
-            if fee == 'Free' and vaccine == 'COVAXIN' and dose_two_capacity > 0:
+            if fee == 'Free' and vaccine == 'COVISHIELD' and dose_two_capacity > 20:
                 print()
                 center_name = session['name']
                 frequency = 2500
@@ -69,18 +69,15 @@ def get_slots(ids):
         initial_date = datetime.date.today()
         for i in range (0,6):
             current_date = (initial_date + datetime.timedelta(days=i)).strftime("%d-%m-%Y")
-            print(current_date, end=' -- ')
+            print(current_date)
             for id in ids:
-                print(id, end=' ')
                 sessions = get_sessions_by_district(str(id), current_date)
                 if sessions != None:
                     analyze_sessions(sessions)
                 else:
                     continue
-            print()
-        print()
         time.sleep(5)
 
 if __name__ == "__main__":
-    ids = get_district_ids('9')
+    ids = ['97']
     get_slots(ids)

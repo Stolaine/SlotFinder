@@ -94,7 +94,7 @@ if __name__ == "__main__":
     get_slots()
 
 
-get_districts_command = 'curl --location --request GET "https://cdn-api.co-vin.in/api/v2/admin/location/districts/34" --header "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36"'
+get_districts_command = 'curl --location --request GET "https://cdn-api.co-vin.in/api/v2/admin/location/districts/5" --header "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36"'
 get_states_command = 'curl --location --request GET "https://cdn-api.co-vin.in/api/v2/admin/location/states" --header "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36"'
 get_session_by_district = 'curl --location --request GET "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=650&date=21-05-2021" --header "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36"'
 
